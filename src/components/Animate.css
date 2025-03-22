@@ -1,0 +1,194 @@
+/* PhotoStack.css */
+.ps-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  font-family: sans-serif;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+.ps-photoset {
+  width: 60%;
+  max-width: 400px;
+  position: relative;
+  margin: -80px auto 0;
+  aspect-ratio: 7 / 5;
+}
+
+.ps-photo {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 500ms ease;
+  border: 2px solid white;
+  z-index: 1;
+}
+
+.ps-photo.active {
+  z-index: 4 !important;
+}
+
+.ps-photoset:not(.hovered) .ps-photo:nth-child(1) {
+  transform: rotate(4deg);
+}
+
+.ps-photoset:not(.hovered) .ps-photo:nth-child(2) {
+  transform: rotate(3deg);
+}
+
+.ps-photoset:not(.hovered) .ps-photo:nth-child(3) {
+  transform: rotate(-3deg);
+}
+
+.ps-photoset.hovered .ps-photo {
+  transform: rotate(0deg);
+}
+
+.ps-photoset.hovered .ps-photo:nth-child(1) {
+  left: 15vw;
+  top: 15vw;
+}
+
+.ps-photoset.hovered .ps-photo:nth-child(2) {
+  left: -15vw;
+  top: 5vw;
+}
+
+.ps-photoset.hovered .ps-photo:nth-child(3) {
+  left: 5vw;
+  top: -10vw;
+}
+
+.ps-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  user-select: none;
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.67);
+  border-radius: 1px;
+}
+
+.ps-controls .block {
+  margin: 10px;
+  display: inline-block;
+}
+
+.option-label {
+  padding: 12px 10px 10px 0;
+}
+
+.option-label:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .ps-photoset {
+    width: 80%;
+    margin-top: -40px;
+  }
+
+  .ps-photoset.hovered .ps-photo:nth-child(1) {
+    left: 10vw;
+    top: 10vw;
+  }
+
+  .ps-photoset.hovered .ps-photo:nth-child(2) {
+    left: -10vw;
+    top: 3vw;
+  }
+
+  .ps-photoset.hovered .ps-photo:nth-child(3) {
+    left: 3vw;
+    top: -7vw;
+  }
+}
+
+
+
+
+
+.floating_btn {
+  position: fixed;
+  bottom: 100px;
+  left: -10px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+
+.floating_btn {
+  position: fixed;
+  bottom: 100px;
+  left: -10px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+
+
+.fa-whatsapp:before {
+  content: "\f232";
+}
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px / 1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+a {
+  color: #337ab7;
+  text-decoration: none;
+}
+
+a {
+  background-color: transparent;
+}
+
+.contact_icon {
+  background-color: #42db87;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 2px 2px 3px #999;
+  display: flex
+;
+  align-items: center;
+  justify-content: center;
+  transform: translatey(0px);
+  animation: pulse 1.5s infinite;
+  box-shadow: 0 0 0 0 #42db87;
+  -webkit-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  -moz-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  -ms-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  font-weight: normal;
+  font-family: sans-serif;
+  text-decoration: none !important;
+  transition: all 300ms ease-in-out;
+}
+
+ 
