@@ -1,6 +1,7 @@
 // PhotoStack.jsx
 import React, { useState, useEffect } from 'react';
-import './Animate.css';
+import '../styles/Animate.css';
+
 
 const Animate = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -46,7 +47,7 @@ const Animate = () => {
       {/* <footer className="ps-controls">
         <div className="block">
           <input 
-            id="corners" 
+            id="corners"
             type="checkbox" 
             checked={corners}
             onChange={(e) => setCorners(e.target.checked)}
@@ -67,12 +68,12 @@ const Animate = () => {
       </footer> */}
 
       <div class="floating_btn" style={{ display:"none1"}}>
-                <a target="_blank" href="https://api.whatsapp.com/send?phone=+91-8800093813&amp;text=Hello, I am looking for Windows">
+                <a target="_blank" href="https://api.whatsapp.com/send?phone=+91-9175050112&amp;text=Hello Anil, I am looking for Windows">
                   <div class="contact_icon">
-                    <i class="fa fa-whatsapp my-float"></i>
+                     <i class="fa fa-whatsapp my-float"></i>
                   </div>
                 </a>
-                <p class="text_icon">let's Chat</p>
+                <p class="text_icon" style={{color:"white"}}>let's Chat</p>
               </div>
     </article>
   );

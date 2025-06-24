@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import './Residential.css';
+import '../styles/Residential.css';
 
 const projects = [
   { id: 1, name: 'Modern Glass Villa', image: 'https://cdn.prod.website-files.com/679b678d080aadecaa78b6ac/67a09b154683945b0cf22d92_hero-02.jpg' },

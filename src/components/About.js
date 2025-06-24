@@ -1,6 +1,6 @@
 // AboutUs.jsx
 import React, { useState } from 'react';
-import styles from './About.module.css'; // Import the CSS Module
+import styles from '../styles/About.module.css'// Import the CSS Module
 
 const About = ({id}) => {
     const [more , setMore] = useState(false);
@@ -47,6 +47,8 @@ setMore(!more);
 };
 
 export default About;
+
+
 
 
 

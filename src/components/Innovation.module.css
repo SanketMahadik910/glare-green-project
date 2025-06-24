@@ -1,0 +1,254 @@
+/* Innovation.module.css */
+
+/* Whole page */
+.innovationPage {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Hero Section (Top Background with Text) */
+.heroSection {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  background-image: url('c:\Users\Sanket\Downloads\pexels-ulltangfilms-323933.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem 4rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.heroText {
+  font-size: 4rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  /* Improves readability */
+  animation: fadeInHero 1.5s ease-in-out forwards;
+}
+
+
+@keyframes fadeInHero {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Content Section (Below Hero) */
+.contentSection {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease;
+  background: #fff;
+  padding: 4rem 2rem;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contentContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.imageBox {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.sideImage {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.textBox {
+  flex: 1;
+  min-width: 300px;
+}
+
+.heading {
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+.paragraph {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .heroText {
+    font-size: 2.5rem;
+  }
+
+  .contentContainer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .heroSection {
+    margin-top: 16px;
+  }
+}
+
+
+
+/* Layout for text + carousel row */
+.carouselContentLayout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* Left side text block */
+.textBlock {
+  flex: 1;
+  min-width: 280px;
+  max-width: 600px;
+}
+
+/* Right side carousel block */
+.carouselBlock {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .carouselContentLayout {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .textBlock,
+  .carouselBlock {
+    width: 100%;
+    max-width: none;
+  }
+
+  .carouselBlock {
+    margin-top: 2rem;
+  }
+}
+
+
+
+
+
+
+
+/* Carousal css  */
+
+
+
+.carouselContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  a .carouselWrapper {
+    margin: 4rem 0;
+  }
+
+  lign-items: center;
+  height: 250px;
+
+}
+
+
+
+.carouselItem {
+  position: absolute;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 1s ease;
+}
+
+.carouselItem.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+.parallelogram {
+  transform: skew(-20deg);
+  overflow: hidden;
+  position: relative;
+  width: 300px;
+  height: 200px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.parallelogram img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: skew(20deg) scale(1.1);
+}
+
+.overlayText {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  text-align: center;
+  transform: skew(20deg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .carouselContainer {
+    height: 200px;
+    /* Must have height */
+  }
+
+  .parallelogram {
+    width: 90%;
+    /* Ensure it’s not shrinking to zero */
+    height: 160px;
+  }
+
+  .carouselItem {
+    position: relative;
+    /* Helps stacking instead of hiding on small screens */
+    opacity: 1 !important;
+    /* Force visibility for testing */
+    transform: scale(1);
+  }
+}
